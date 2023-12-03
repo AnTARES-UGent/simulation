@@ -10,4 +10,3 @@ GitHub repo for the simulation team of AnTARES
 - Jorre Verhaest
 - Vic De Ridder
 - Zoë Lorrez
-
