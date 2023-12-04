@@ -2,6 +2,11 @@
 GitHub repo for the simulation team of AnTARES
 
 # Members
-testing a
-b
-c
+(Picked from Slack-team)
+- Adem Ayari
+- Alichan Borokov
+- Bram Windey
+- Jarno Verhofstadt
+- Jorre Verhaest
+- Vic De Ridder
+- Zoë Lorrez
