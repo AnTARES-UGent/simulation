@@ -20,22 +20,28 @@ Some examples:
 ## Bugs
 When encountering a bug that is present on the develop- or masterbranch, create an [Issue](https://github.com/AnTARES-UGent/simulation/issues) explaining the bug. This is not necessary when working on other branches, as those should be actively being worked on and tested. This way of working assures the rest of the team knows what's up.
 
-When creating an Issue for a bug, begin its name with 'Bug: '. In the description you add a summary, steps to recreate and a screenshot/copy-paste of the bug happening (if applicable). 
+When creating an Issue for a bug, begin its name with 'Bug: '.
+In the description, you add a summary, steps to recreate and a screenshot/copy-paste of the bug happening (if applicable). 
 
 ## Branches
-The main branch is for working code and working features. It is locked from pushing anything to it directly. Everything should first be commited/merged into the develop-branch, which then can get merged via a pull request into main.
+The main branch is for working code and working features.
+It is locked from pushing anything to it directly.
+Everything should first be commited/merged into a development-branch,
+which then can get merged via a pull request into main.
 
-When creating a new feature, or fixing a bug requiring more then 1 commit, it is encouraged to create a new branch with a fitting name. A name would start with 'feature/' or 'bugfix/' and then the feature-name or bugfix (issue number):
+When creating a new feature,
+or fixing a bug requiring more than one commit, you should create a new branch with a fitting name.
+A name would start with 'feature/' or 'bugfix/' and then the feature-name or bugfix (issue number):
 - feature/new-parachute
 - bugfix/#13-parachute-doesnt-deploy
 - doc-update/add-workflow
- When the new feature is finished, or the bug is completely fixed and tested, you can merge into develop and delete your branch. 
+ When the new feature is finished, or the bug is completely fixed and tested, you can merge into master and delete your branch. 
 
 
 ## Pull requests
 Pull requests are the preferred way to merge two branches. They allow other people to see what you've changed, and comment on things that might need to change. When everyone is happy with the changes, the branch can be merged and the pull request closed. 
 
-Currently a pull request needs 2 approved reviews. 
+Currently, a pull request needs at least one approved review. 
 
 When people have conflicting opinions about your feature or the way some things are done, go by the opinion of the majority. Feedback from others should never be neglected, and be taken into account before merging if the feedback directly addresses the new feature/bugfix. Before merging, make sure all feedback is addressed. The person opening the pull request is responsible for resolving all arising issues before mergin.
 

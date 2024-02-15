@@ -36,7 +36,7 @@ calisto = Rocket(
     coordinate_system_orientation="tail_to_nose",
 )
 
-#calisto.draw()
+# calisto.draw()
 buttons = calisto.set_rail_buttons(
     upper_button_position=0.0818,
     lower_button_position=-0.6182,
@@ -45,7 +45,7 @@ buttons = calisto.set_rail_buttons(
 
 calisto.add_motor(Pro75M1670, position=-1.255)
 
-#calisto.draw()
+# calisto.draw()
 nose = calisto.add_nose(
     length=0.55829, kind="vonKarman", position=1.278
 )
@@ -63,7 +63,7 @@ fins = calisto.add_trapezoidal_fins(
 tail = calisto.add_tail(
     top_radius=0.0635, bottom_radius=0.0435, length=0.060, position=-1.194656
 )
-calisto.draw()
+# calisto.draw()
 test_flight = Flight(
   rocket=calisto, environment=env, rail_length=5.2, inclination=85, heading=0
 )
