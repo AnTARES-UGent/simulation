@@ -43,13 +43,6 @@ Pull requests are the preferred way to merge two branches. They allow other peop
 
 Currently, a pull request needs at least one approved review. 
 
-When people have conflicting opinions about your feature or the way some things are done, go by the opinion of the majority. Feedback from others should never be neglected, and be taken into account before merging if the feedback directly addresses the new feature/bugfix. Before merging, make sure all feedback is addressed. The person opening the pull request is responsible for resolving all arising issues before mergin.
+When people have conflicting opinions about your feature or the way some things are done, go by the opinion of the majority. Feedback from others should never be neglected, and be taken into account before merging if the feedback directly addresses the new feature/bugfix. Before merging, make sure all feedback is addressed. The person opening the pull request is responsible for resolving all arising issues before merging.
 
 When merging a pull request, prefer to "Squash and merge". This will create a cleaner commit-history on the main branches so features/bugfixes can easily be reverted if necessary.
-
-
-## Tests
-New features and bugfixes should always be tested first inside a Docker environment. Here are the steps to do this:
-- Very nice step 1
-- Very nice step 2
-hmmmm, needs some work
