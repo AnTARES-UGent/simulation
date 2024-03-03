@@ -1,0 +1,7 @@
+README.md
+setup.py
+antares_simulation.egg-info/PKG-INFO
+antares_simulation.egg-info/SOURCES.txt
+antares_simulation.egg-info/dependency_links.txt
+antares_simulation.egg-info/requires.txt
+antares_simulation.egg-info/top_level.txt

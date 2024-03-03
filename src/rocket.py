@@ -2,41 +2,55 @@
 
 from rocketpy import Rocket
 from src.motor import Pro75M1670
+import yaml
 
+with open('./cfg/design1.yaml', 'r') as yaml_file:
+    rocket_data = yaml.safe_load(yaml_file)
+
+# Create Rocket object
 calisto = Rocket(
-    radius=0.0635,
-    mass=14.426,  # without motor
-    inertia=(6.321, 6.321, 0.034),
-    power_off_drag="../data/calisto/powerOffDragCurve.csv",
-    power_on_drag="../data/calisto/powerOnDragCurve.csv",
-    center_of_mass_without_motor=0,
+    radius=rocket_data['rocket']['radius'],
+    mass=rocket_data['rocket']['mass'],
+    inertia=tuple(rocket_data['rocket']['inertia']),
+    center_of_mass_without_motor=rocket_data['rocket']['center_of_mass_without_motor'],
+    power_off_drag="./data/calisto/powerOffDragCurve.csv",
+    power_on_drag="./data/calisto/powerOnDragCurve.csv",
     coordinate_system_orientation="tail_to_nose",
 )
 
+# Set rail buttons
 buttons = calisto.set_rail_buttons(
-    upper_button_position=0.0818,
-    lower_button_position=-0.6182,
-    angular_position=45,
+    upper_button_position=rocket_data['buttons']['upper_button_position'],
+    lower_button_position=rocket_data['buttons']['lower_button_position'],
+    angular_position=rocket_data['buttons']['angular_position'],
 )
 
-calisto.add_motor(Pro75M1670, position=-1.255)
+# Add motor
+calisto.add_motor(Pro75M1670, rocket_data['motor']['position'])
 
+# Add nose
 nose = calisto.add_nose(
-    length=0.55829, kind="vonKarman", position=1.278
+    length=rocket_data['nose']['length'],
+    kind=rocket_data['nose']['kind'],
+    position=rocket_data['nose']['position'],
 )
 
+# Add fins
 fins = calisto.add_trapezoidal_fins(
-    n=4,
-    root_chord=0.120,
-    tip_chord=0.040,
-    span=0.100,
-    sweep_length=None,
-    cant_angle=0,
-    position=-1.04956,
+    n=rocket_data['fins']['n'],
+    root_chord=rocket_data['fins']['root_chord'],
+    tip_chord=rocket_data['fins']['tip_chord'],
+    span=rocket_data['fins']['span'],
+    cant_angle=rocket_data['fins']['cant_angle'],
+    position=rocket_data['fins']['position'],
 )
 
+# Add tail
 tail = calisto.add_tail(
-    top_radius=0.0635, bottom_radius=0.0435, length=0.060, position=-1.194656
+    top_radius=rocket_data['tail']['top_radius'],
+    bottom_radius=rocket_data['tail']['bottom_radius'],
+    length=rocket_data['tail']['length'],
+    position=rocket_data['tail']['position'],
 )
 
 main = calisto.add_parachute(

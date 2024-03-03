@@ -3,7 +3,7 @@
 from rocketpy import SolidMotor
 
 Pro75M1670 = SolidMotor(
-    thrust_source="../data/motors/Cesaroni_M1670.eng",
+    thrust_source="./data/motors/Cesaroni_M1670.eng",
     dry_mass=1.815,
     dry_inertia=(0.125, 0.125, 0.002),
     center_of_dry_mass_position=0.317,
