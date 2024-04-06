@@ -4,7 +4,7 @@ from rocketpy import Rocket
 from src.motor import Pro75M1670
 import yaml
 
-with open('./cfg/design1.yaml', 'r') as yaml_file:
+with open('../cfg/design1.yaml', 'r') as yaml_file:
     rocket_data = yaml.safe_load(yaml_file)
 
 # Create Rocket object
@@ -13,8 +13,8 @@ calisto = Rocket(
     mass=rocket_data['rocket']['mass'],
     inertia=tuple(rocket_data['rocket']['inertia']),
     center_of_mass_without_motor=rocket_data['rocket']['center_of_mass_without_motor'],
-    power_off_drag="./data/calisto/powerOffDragCurve.csv",
-    power_on_drag="./data/calisto/powerOnDragCurve.csv",
+    power_off_drag="../data/calisto/powerOffDragCurve.csv",
+    power_on_drag="../data/calisto/powerOnDragCurve.csv",
     coordinate_system_orientation="tail_to_nose",
 )
 

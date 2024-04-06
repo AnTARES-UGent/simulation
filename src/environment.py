@@ -15,4 +15,4 @@ environment.set_date(
     (tomorrow.year, tomorrow.month, tomorrow.day, 12), timezone="America/Denver"
 )  # Tomorrow's date in year, month, day, hour UTC format
 
-environment.set_atmospheric_model(type='Forecast', file='GFS')
+environment.set_atmospheric_model(type='standard_atmosphere')
