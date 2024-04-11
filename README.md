@@ -4,8 +4,8 @@ Take a look at [CONTRIBUTING.md](CONTRIBUTING.md) for some general guidelines on
 
 # Installation
 To install: 
-(i) Clone or download this repository
-(ii) Move to the local repo folder on your device
+(i) Clone or download this repository,
+(ii) Move to the local repo folder on your device,
 (iii) Run:
 ```
 pip install -e .
