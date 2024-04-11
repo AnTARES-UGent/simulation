@@ -70,3 +70,5 @@ drogue = calisto.add_parachute(
     lag=1.5,
     noise=(0, 8.3, 0.5),
 )
+
+calisto.all_info()

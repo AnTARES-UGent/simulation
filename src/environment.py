@@ -4,9 +4,9 @@ from rocketpy import Environment
 import datetime
 
 environment = Environment(
-    latitude=32.990254,
-    longitude=-106.974998,
-    elevation=1400,
+    latitude=51.0229823,
+    longitude=3.7103475,
+    elevation=20,
 )
 
 tomorrow = datetime.date.today() + datetime.timedelta(days=1)

@@ -22,11 +22,11 @@ nose:
 
 fins: 
   n: 4
-  root_chord: 0.12
-  tip_chord: 0.04
-  span: 0.085
+  root_chord: 0.36
+  tip_chord: 0.18
+  span: 0.100
   cant_angle: 0
-  position: -1.04956  
+  position: -0.84956
 
 tail: 
   top_radius: 0.0635
