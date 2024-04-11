@@ -3,6 +3,7 @@
 from rocketpy import Environment
 import datetime
 
+# UGent campus Sterre
 environment = Environment(
     latitude=51.0229823,
     longitude=3.7103475,
