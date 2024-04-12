@@ -4,21 +4,17 @@ from rocketpy import Flight
 from src import environment, rocket
 
 
-
-
 def create_flight(cfg_file):
-   """
-   Arguments:
+    """
+    Arguments:
 
-   Returns:
+    Returns:
 
-   """
+    """
 
+    calisto = rocket.create_rocket(cfg_file)
+    envir = environment.create_environment(cfg_file)
 
-   calisto = rocket.create_rocket(cfg_file)
-   envir = environment.create_environment(cfg_file)
+    test_flight = Flight(rocket=calisto, environment=envir, rail_length=5.2, inclination=80, heading=0, verbose=True)
 
-
-   test_flight = Flight(rocket=calisto, environment=envir, rail_length=5.2, inclination=80, heading=0, verbose=True)
-
-   return test_flight
+    return test_flight
