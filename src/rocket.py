@@ -20,8 +20,8 @@ def create_rocket(cfg):
         mass=rocket_data['rocket']['mass'],
         inertia=tuple(rocket_data['rocket']['inertia']),
         center_of_mass_without_motor=rocket_data['rocket']['center_of_mass_without_motor'],
-        power_off_drag="./data/calisto/powerOffDragCurve.csv",
-        power_on_drag="./data/calisto/powerOnDragCurve.csv",
+        power_off_drag="../data/calisto/powerOffDragCurve.csv",
+        power_on_drag="../data/calisto/powerOnDragCurve.csv",
         coordinate_system_orientation="tail_to_nose",
     )
 
@@ -74,4 +74,5 @@ def create_rocket(cfg):
     )
 
     # calisto.all_info()
+    calisto.draw()
     return calisto

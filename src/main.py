@@ -17,7 +17,7 @@ def args_to_dict(args, keys):
 
 
 parser = argparse.ArgumentParser()
-defaults = {"cfg": './cfg/design.yaml'}
+defaults = {"cfg": '../cfg/design.yaml'}
 add_dict_to_argparser(parser, defaults)
 
 # Current test-simulation from: https://docs.rocketpy.org/en/latest/#running-your-first-simulation
