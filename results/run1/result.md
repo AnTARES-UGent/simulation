@@ -26,3 +26,7 @@ we're worried that it might not be strong enough. More research will be needed.
 - Maximum Dynamic Pressure: 8.193e+04 Pa at 1.53 s
 - Maximum Acceleration During Motor Burn: 296.237 m/s² at 0.04 s
 - Maximum Gs During Motor Burn: 30.208 g at 0.04 s
+
+For the motor, we took the date from these sites:
+- https://www.thrustcurve.org/motors/Cesaroni/7312M4770-P/
+- http://www.pro38.com/pdfs/Pro98_dimensions.pdf
