@@ -7,12 +7,15 @@ we found the fins to be way too small for our rocket.
 Enlarging them considerably improved the stability of the rocket, and yielded our first results.
 The rocket parameters can be found in [design.yaml](design.yaml). 
 The rocket now looks like this:
+
 ![Plot of our current rocket](rocket.png)
 
 The stability-margin before making the fins bigger were below 0, now they look like this:
+
 ![Plot of stability margin](stability_margin.png)
 
 There is also very good news, we already hit 3.7km! Without weather, but still:
+
 ![Plot of flight trajectory](flight_trajectory.png)
 
 There is some more concerning news though, the acceleration the motor provides seems a lot, 
