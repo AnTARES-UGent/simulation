@@ -18,8 +18,10 @@ There is also very good news, we already hit 3.7km! Without weather, but still:
 
 ![Plot of flight trajectory](flight_trajectory.png)
 
+The flight is angled towards the nord, with the rail on an inclination of 80° (with 90 being perpendicular to the ground).
+
 There is some more concerning news though, the acceleration the motor provides seems a lot, 
-we're worried that it might not be strong enough. More research will be needed.
+we're worried that the rocket might not be strong enough. More research will be needed.
 - Maximum Speed: 371.140 m/s at 1.53 s
 - Maximum Mach Number: 1.095 Mach at 1.54 s
 - Maximum Reynolds Number: 3.152e+06 at 1.53 s
@@ -30,3 +32,7 @@ we're worried that it might not be strong enough. More research will be needed.
 For the motor, we took the date from these sites:
 - https://www.thrustcurve.org/motors/Cesaroni/7312M4770-P/
 - http://www.pro38.com/pdfs/Pro98_dimensions.pdf
+
+We also got some more info about the drag and other aerodynamic the design team like to know, 
+but there is no info per part of the rocket, only for the whole rocket:
+![Plots with aerodynamic data](aerodynamics.png)
