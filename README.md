@@ -21,4 +21,5 @@ pip install -e .
 - Jorre Verhaest
 - Nicholas Goga
 - Vic De Ridder
+- Bas De Maertelaere
 - Zoë Lorrez (Founder Antares)
