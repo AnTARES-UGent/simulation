@@ -2,14 +2,20 @@
 GitHub repo for the simulation team of AnTARES. 
 Take a look at [CONTRIBUTING.md](CONTRIBUTING.md) for some general guidelines on pushing code to this repo. 
 
-# Members
+# Installation
+To install: 
+(i) Clone or download this repository,
+(ii) Move to the local repo folder on your device,
+(iii) Run:
+```
+pip install -e .
+```
+
+# Current Simulation Members
 (Picked from Slack-team)
-- Adem Ayari
-- Alichan Borokov (Projectmanager)
+- Bas De Maertelaere
 - Bram Windey
-- Hannes Klinckaert
-- Jarno Verhofstadt
 - Jorre Verhaest
-- Nicholas Goga
 - Vic De Ridder
+- Alichan Borokov (Projectmanager)
 - Zoë Lorrez (Founder Antares)

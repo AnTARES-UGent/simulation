@@ -1,58 +1,78 @@
 # Rocket parameters/code
 
 from rocketpy import Rocket
-from src.motor import Pro75M1670
+import src.motor as motor
+import yaml
 
-calisto = Rocket(
-    radius=0.0635,
-    mass=14.426,  # without motor
-    inertia=(6.321, 6.321, 0.034),
-    power_off_drag="../data/calisto/powerOffDragCurve.csv",
-    power_on_drag="../data/calisto/powerOnDragCurve.csv",
-    center_of_mass_without_motor=0,
-    coordinate_system_orientation="tail_to_nose",
-)
 
-buttons = calisto.set_rail_buttons(
-    upper_button_position=0.0818,
-    lower_button_position=-0.6182,
-    angular_position=45,
-)
+def create_rocket(cfg):
+    """
+    Arguments:
+              - cfg: cfg file location (yaml file)
+    Returns:
+              - Rocketpy rocket/calisto object
+    """
+    with open(cfg, 'r') as yaml_file:
+        rocket_data = yaml.safe_load(yaml_file)
 
-calisto.add_motor(Pro75M1670, position=-1.255)
+    calisto = Rocket(
+        radius=rocket_data['rocket']['radius'],
+        mass=rocket_data['rocket']['mass'],
+        inertia=tuple(rocket_data['rocket']['inertia']),
+        center_of_mass_without_motor=rocket_data['rocket']['center_of_mass_without_motor'],
+        power_off_drag="../data/calisto/powerOffDragCurve.csv",
+        power_on_drag="../data/calisto/powerOnDragCurve.csv",
+        coordinate_system_orientation="tail_to_nose",
+    )
 
-nose = calisto.add_nose(
-    length=0.55829, kind="vonKarman", position=1.278
-)
+    calisto.set_rail_buttons(
+        upper_button_position=rocket_data['buttons']['upper_button_position'],
+        lower_button_position=rocket_data['buttons']['lower_button_position'],
+        angular_position=rocket_data['buttons']['angular_position'],
+    )
 
-fins = calisto.add_trapezoidal_fins(
-    n=4,
-    root_chord=0.120,
-    tip_chord=0.040,
-    span=0.100,
-    sweep_length=None,
-    cant_angle=0,
-    position=-1.04956,
-)
+    calisto.add_motor(motor.get_motor(cfg), rocket_data['motor']['position'])
 
-tail = calisto.add_tail(
-    top_radius=0.0635, bottom_radius=0.0435, length=0.060, position=-1.194656
-)
+    calisto.add_nose(
+        length=rocket_data['nose']['length'],
+        kind=rocket_data['nose']['kind'],
+        position=rocket_data['nose']['position'],
+    )
 
-main = calisto.add_parachute(
-    name="main",
-    cd_s=10.0,
-    trigger=800,  # ejection altitude in meters
-    sampling_rate=105,
-    lag=1.5,
-    noise=(0, 8.3, 0.5),
-)
+    calisto.add_trapezoidal_fins(
+        n=rocket_data['fins']['n'],
+        root_chord=rocket_data['fins']['root_chord'],
+        tip_chord=rocket_data['fins']['tip_chord'],
+        span=rocket_data['fins']['span'],
+        cant_angle=rocket_data['fins']['cant_angle'],
+        position=rocket_data['fins']['position'],
+    )
 
-drogue = calisto.add_parachute(
-    name="drogue",
-    cd_s=1.0,
-    trigger="apogee",  # ejection at apogee
-    sampling_rate=105,
-    lag=1.5,
-    noise=(0, 8.3, 0.5),
-)
+    calisto.add_tail(
+        top_radius=rocket_data['tail']['top_radius'],
+        bottom_radius=rocket_data['tail']['bottom_radius'],
+        length=rocket_data['tail']['length'],
+        position=rocket_data['tail']['position'],
+    )
+
+    calisto.add_parachute(
+        name="main",
+        cd_s=10.0,
+        trigger=800,  # ejection altitude in meters
+        sampling_rate=105,
+        lag=1.5,
+        noise=(0, 8.3, 0.5),
+    )
+
+    calisto.add_parachute(
+        name="drogue",
+        cd_s=1.0,
+        trigger="apogee",  # ejection at apogee
+        sampling_rate=105,
+        lag=1.5,
+        noise=(0, 8.3, 0.5),
+    )
+
+    # calisto.all_info()
+    calisto.draw()
+    return calisto
