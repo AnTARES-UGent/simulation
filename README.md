@@ -11,14 +11,11 @@ To install:
 pip install -e .
 ```
 
-# Members
+# Current Simulation Members
 (Picked from Slack-team)
-- Adem Ayari
-- Alichan Borokov (Projectmanager)
+- Bas De Maertelaere
 - Bram Windey
-- Hannes Klinckaert
-- Jarno Verhofstadt
 - Jorre Verhaest
-- Nicholas Goga
 - Vic De Ridder
+- Alichan Borokov (Projectmanager)
 - Zoë Lorrez (Founder Antares)
