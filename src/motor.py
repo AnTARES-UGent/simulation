@@ -5,13 +5,13 @@ from rocketpy import SolidMotor
 
 def get_motor(cfg):
     Pro75M1670 = SolidMotor(
-        thrust_source="../data/motors/Cesaroni_7312M4770-P.eng",
-        dry_mass=2.924,
-        dry_inertia=(0.249, 0.249, 0.351),
-        center_of_dry_mass_position=0.317,
-        grains_center_of_mass_position=0.274,
-        burn_time=1.617,
-        grain_number=3,
+        thrust_source="../data/motors/Cesaroni_5880M1160-P.eng",
+        dry_mass=2.181,
+        dry_inertia=(0.317, 0.317, 0.004),
+        center_of_dry_mass_position=0.407,
+        grains_center_of_mass_position=0.423,
+        burn_time=5.07,
+        grain_number=5,
         grain_separation=0.005,
         grain_density=1815,
         grain_outer_radius=0.033,
