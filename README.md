@@ -13,6 +13,7 @@ pip install -e .
 
 # Current Simulation Members
 (Picked from Slack-team)
+- Aaron Arefi
 - Bas De Maertelaere
 - Bram Windey
 - Jorre Verhaest
