@@ -12,11 +12,6 @@ pip install -e .
 ```
 
 # Current Simulation Members
-(Picked from Slack-team)
 - Aaron Arefi
-- Bas De Maertelaere
-- Bram Windey
-- Jorre Verhaest
-- Vic De Ridder
-- Alichan Borokov (Projectmanager)
-- Zoë Lorrez (Founder Antares)
+- Kaat De Bolle
+- Thomas Healy
